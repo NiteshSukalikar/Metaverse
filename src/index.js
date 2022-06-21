@@ -24,36 +24,36 @@ const material_space = new THREE.MeshPhongMaterial({ color: 0xffffff });
 const space = new THREE.Mesh(geometry_space, material_space);
 scene.add(space);
 
-// Geometric figure to be represented in the Metaverse: Cube
-const geometry = new THREE.BoxGeometry();
-const material = new THREE.MeshPhongMaterial({ color: 0x00ff00 });
-const cube = new THREE.Mesh(geometry, material);
-scene.add(cube);
+// // Geometric figure to be represented in the Metaverse: Cube
+// const geometry = new THREE.BoxGeometry();
+// const material = new THREE.MeshPhongMaterial({ color: 0x00ff00 });
+// const cube = new THREE.Mesh(geometry, material);
+// scene.add(cube);
 
-// Geometric figure to be represented in the Metaverse: Cone
-const geometry_cone = new THREE.ConeGeometry(5, 20, 32);
-const material_cone = new THREE.MeshPhongMaterial({ color: 0xed810a });
-const cone = new THREE.Mesh(geometry_cone, material_cone);
-cone.position.set(-10, 5, 0);
-scene.add(cone);
+// // Geometric figure to be represented in the Metaverse: Cone
+// const geometry_cone = new THREE.ConeGeometry(5, 20, 32);
+// const material_cone = new THREE.MeshPhongMaterial({ color: 0xed810a });
+// const cone = new THREE.Mesh(geometry_cone, material_cone);
+// cone.position.set(-10, 5, 0);
+// scene.add(cone);
 
-// Geometric figure to be represented in the Metaverse: Cylinder
-const geometry_cylinder = new THREE.CylinderGeometry(5, 5, 5, 32);
-const material_cylinder = new THREE.MeshPhongMaterial({ color: 0x0000ff });
-const cylinder = new THREE.Mesh(geometry_cylinder, material_cylinder);
-cylinder.position.set(20, 5, 0);
-scene.add(cylinder);
+// // Geometric figure to be represented in the Metaverse: Cylinder
+// const geometry_cylinder = new THREE.CylinderGeometry(5, 5, 5, 32);
+// const material_cylinder = new THREE.MeshPhongMaterial({ color: 0x0000ff });
+// const cylinder = new THREE.Mesh(geometry_cylinder, material_cylinder);
+// cylinder.position.set(20, 5, 0);
+// scene.add(cylinder);
 
 camera.position.set(10, 5, 40);
 
 function animate() {
-    cube.rotation.x += 0.05;
-    cube.rotation.y += 0.05;
+    // cube.rotation.x += 0.05;
+    // cube.rotation.y += 0.05;
 
-    cone.rotation.x += 0.01;
-    cone.rotation.y += 0.01;
+    // cone.rotation.x += 0.01;
+    // cone.rotation.y += 0.01;
 
-    cylinder.rotation.x += 0.05;
+    // cylinder.rotation.x += 0.05;
 
     requestAnimationFrame(animate);
     // Movement to the left
@@ -101,7 +101,7 @@ function mintNFT() {
 
     // Web3 Instance 
     let web3 = new Web3(window.ethereum);
-    let contract = new web3.eth.Contract(abi, "0xFb25E1F3774E802E90a421987E10b621D2B7d346");
+    let contract = new web3.eth.Contract(abi, "0x9D63572CD587a633E9b765c0E4cCAC678e30966F");
 
     web3.eth.getAccounts().then((accounts) => {
         contract.methods.mint(nft_name, nft_width, nft_height, nft_depth, nft_x, nft_y, nft_z).send({ from: accounts[0] }).then((data) => {
