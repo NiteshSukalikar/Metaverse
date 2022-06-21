@@ -1,6 +1,6 @@
 import abi from "./abi/abi.json" assert {type: "json"};
 
-// SC: 0xFb25E1F3774E802E90a421987E10b621D2B7d346
+// SC: 0x9C9Ba6efd42b37db649dBE96193154F33E115699
 
 const blockchain = new Promise((res, rej) => {
 
@@ -11,7 +11,7 @@ const blockchain = new Promise((res, rej) => {
 
     // Web3 Instance 
     let web3 = new Web3(window.ethereum);
-    let contract = new web3.eth.Contract(abi, "0xFb25E1F3774E802E90a421987E10b621D2B7d346");
+    let contract = new web3.eth.Contract(abi, "0x9C9Ba6efd42b37db649dBE96193154F33E115699");
 
     // Get my Metamask address
     web3.eth.requestAccounts().then((accounts) =>{
